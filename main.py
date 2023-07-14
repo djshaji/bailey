@@ -12,6 +12,7 @@ class MyApp(Adw.Application):
 
     def on_activate(self, app):
         self.win = UI(application=app)
+        self.win.app = self
         self.win.present()
 
 app = MyApp(application_id="app.qsx")
